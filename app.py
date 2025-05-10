@@ -16,6 +16,9 @@ def setup_logger():
     logger = logging.getLogger('chat_app')
     logger.setLevel(logging.DEBUG)
     
+    # Clear any existing handlers
+    logger.handlers = []
+    
     # Create formatters
     file_formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s'
